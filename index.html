@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html>
+    <title>Twitter</title>
+    <head>
+        <meta name="viewport" content="width=device-width initial-scale=1.0">
+      
+          <meta charset="UTF-8"/>
+        <link rel="icon" href="file:///home/mahmoud/Downloads/twitter%20(1).svg">  
+        <link rel="stylesheet" href="style.css">
+        <script src="main.js"></script>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">  
+        <script src="https://kit.fontawesome.com/ed2d065245.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <!-- Beg Left-Section-->
+     <header>
+        <div class="header-style">
+            
+        <div class="icons">
+            <a href="">
+        
+                <i class="fab fa-brands fa-twitter" style="color: rgb(29, 155, 240) ;font-size:28px;"></i>
+            </a>
+         <a href="">
+            <i class="fas fa-home"></i>
+             <span>Home</span>   
+         </a>
+       
+         <a href="">
+            <i class="fas fa-hashtag"></i>
+             <span>Explore</span>
+         </a>
+        <a href="">
+             <i class="fas fa-regular fa-bell"></i>
+             <span>Notifications</span>
+        </a>
+        <a href="">
+            <i class="fa-regular fa-envelope"></i>
+            <span>Messages</span>               
+        </a>      
+        <a href=""> 
+             <i class=" fas fa-light fa-bookmark "></i>
+            <span>Saved</span>
+        </a>
+        <a href="">
+             <i class=" fas fa-solid fa-table-list "></i>
+            <span>Lists</span>
+        </a>
+        <a href="profile.html">
+            <i class="fa-solid fa-user"></i>
+           <span>Profile</span>
+       </a>
+       <a href="">
+       <span class="material-symbols-outlined">
+more
+</span>
+            <span>More</span>
+        </a>
+        <button onclick="showingDialog()" class="tweet-button">
+            <span>Tweet</span>
+        </button>
+        </div>
+        </div>
+    <div class="main_acc">
+         <a href="">
+                <img src="./Images/arsenal.jpg" class="prof-img">
+             <div class="acc-details">
+                <span class="name">Mahmoud Elabady</span>
+                <span class="handle">@32Mahm</span> 
+            </div>
+         </a>
+     </div>
+
+        
+        <!--End Left-Section-->
+     </header>
+     <main>
+      <dialog id="tweetDialog">
+        <button  onclick="closingDialog()" class="closeDialig">  
+          <span class="material-symbols-outlined" id="clos" >
+            close
+            </span>
+        </button>
+        <div class="N-tweet">
+          <div class="add-text" >
+          <img src="./Images/lmTweet.jpeg" alt="" class="prof-img"/>
+          <form class="text">
+            <input class="alt-text"type="text" id="new-tweet" placeholder="What's happening?" required name="What's happenging?">
+          </form> 
+          </div>
+       
+          </div>
+          <div class="tweet-icons">
+            <i class="fa-regular fa-image"></i>
+            <i class="fa-regular fa-image"></i>
+            <i class="fa-regular fa-image"></i>
+            <i class="fa-regular fa-face-smile"></i>
+            <i class="fa fa-calendar-week"></i>
+            <i class="fa-regular fa-location-dot"></i>
+            <div class="button">
+            <button onclick="addNewTweet()"class="newTweet">Tweet</button>
+            </div>
+            </div>
+        </dialog>
+            <div class="main-flex">
+
+              
+                <div class="main-feed">
+                    <div class="home-bar">
+                        <span>Home</span>
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>  
+                    </div>
+                    <div class="N-tweet">
+                        <div class="add-text" >
+                          <div>
+                            <a href="profile.html">
+                        <img src="./Images/arsenal.jpg" alt="" class="prof-img"/>
+                      </a>
+                      </div>
+                        <form class="text">
+                          <input  oninput="enter(this)"  class="alt-text"type="text" id="new-tweet2" placeholder="What's happening?" required name="What's happenging?">
+                        </form> 
+                        </div>
+                        <div class="tweet-icons">
+                            <i class="fa-regular fa-image"></i>
+                            <i class="fa-regular fa-image"></i>
+                            <i class="fa-regular fa-image"></i>
+                            <i class="fa-regular fa-face-smile"></i>
+                            <i class="fa fa-calendar-week"></i>
+                            <i class="fa-regular fa-location-dot"></i>
+                            <div class="button">
+                            <button onclick="addNewTweet()"class="newTweet" id="test">Tweet</button>
+                            </div>
+                        </div>
+                    
+                    </div>
+                    <div class="tweets">
+                    <div class="feed-tweet" id="1">
+                        <img src="./Images/MElabady.jpg" class="prof-img">
+                       <div class="feed-t-det">
+                          <div class="feed-details">
+                              <a href="" class="tweeter-name">
+                                Mahmoud 
+                                <div>
+                                  <span class="tweeter-handle">@m7moud_elabady</span></div>
+                                  <div><span class="date">. 1m</span></div>
+                              </a>
+                            </div>
+                       
+                         <div class="tweet-text">
+                            <p>Hello,There </p>
+                         </div>
+                         <div class="tweet-icons">
+                            <i class="fa-regular fa-comment"></i>
+                            <i class="fa-solid fa-retweet"></i>
+                          <i class="fa-regular fa-heart"></i>
+                            <i class="fa-solid fa-arrow-up-from-bracket"></i>
+
+                        </div>
+                     </div> 
+                    </div>
+                   
+                    <div class="feed-tweet" id="2">
+                      <img src="./Images/Screenshot from 2023-02-07 18-56-35.png" class="prof-img">
+                     <div class="feed-t-det">
+                        <div class="feed-details">
+                            <a href="" class="tweeter-name">
+                              المصحف 
+                              <div>
+                              <span class="tweeter-handle">@Quran kareem</span></div>
+                              <div><span class="date">. 1m</span></div>
+                            </a>
+                          </div>
+                     
+                       <div class="tweet-text">
+                          <p id="demo">يَا أَيُّهَا النَّاسُ اتَّقُوا رَبَّكُمْ إِنَّ زَلْزَلَةَ السَّاعَةِ شَيْءٌ عَظِيمٌ
+                          </p>
+                       </div>
+                       <div class="tweet-icons">
+                          <i class="fa-regular fa-comment"></i>
+                          <i class="fa-solid fa-retweet"></i>
+                        <i class="fa-regular fa-heart"></i>
+                          <i class="fa-solid fa-arrow-up-from-bracket"></i>
+
+                      </div>
+                   </div> 
+                  </div>
+                 
+                  <div class="feed-tweet" id="3">
+                    <img src="./Images/MElabady.jpg" class="prof-img">
+                   <div class="feed-t-det">
+                      <div class="feed-details">
+                          <a href="" class="tweeter-name">
+                            Random 
+                            <span class="tweeter-handle">@nwj</span>
+                            <span class="date">. 15m</span>
+                          </a>
+                        </div>
+                   
+                     <div class="tweet-text">
+                        <video width="400" >
+                          <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                        </video>
+                     </div>
+                     <div class="tweet-icons">
+                        <i class="fa-regular fa-comment"></i>
+                        <i class="fa-solid fa-retweet"></i>
+                      <i class="fa-regular fa-heart"></i>
+                        <i class="fa-solid fa-arrow-up-from-bracket"></i>
+
+                    </div>
+                 </div> 
+                </div>
+          
+                    <div class="feed-tweet" id="4">
+                      <img src="./Images/LM10.jpg" class="prof-img">
+                     <div class="feed-t-det">
+                        <div class="feed-details">
+                            <a href="" class="tweeter-name">
+                              Luka Modric` 
+                              <div>
+                                <span class="tweeter-handle">@lukamodric10</span></div>
+                                <div><span class="date">. 1h</span></div>
+                            </a>
+                          </div>
+                     
+                       <div class="tweet-text">
+                        <p>sapa7oo</p>
+                          <img src="./Images/lmTweet.jpeg" alt="Modric'">
+                       </div>
+                       <div class="tweet-icons">
+                          <i class="fa-regular fa-comment"></i>
+                          <i class="fa-solid fa-retweet"></i>
+                        <i class="fa-regular fa-heart"></i>
+                          <i class="fa-solid fa-arrow-up-from-bracket"></i>
+
+                      </div>
+                   </div> 
+                   
+                  </div>
+  
+                </div>
+              </div>
+                
+                <div class="main-side">
+                    <div class="search-ban">
+                      <span class="material-symbols-outlined" id="search-icon">
+                        search
+                        </span>
+                        <form class="search">
+                          <input class="search-input" type="text" placeholder="Search Twitter" required name="Search Twitter" >
+
+                        </form>
+                       
+                    </div>
+                    <div class="Explore">
+                    <div class="trends">
+                        <span class="first-word">What'shappening</span>
+                        <div class="trend">
+
+                            <p style="font-size: larger;">Sports .LIVE</p>
+
+                            <span class="trend-type">Trending in Egypt</span>
+                            <div class="trendType">
+                            <p>Modric`</p>
+                              <span>13.5M Tweets</span>
+                          </div>
+                          <div class="trendType">
+                            <p>Messi</p>
+                              <span>11.5K Tweets</span>
+                          </div>
+                          <div class="trendType">
+                            <p>Final</p>
+                              <span>13.5K Tweets</span>
+                          </div>
+                          <div class="trendType">
+                            <p>World Cub</p>
+                              <span>13.5K Tweets</span>
+                          </div>
+                          <div class="trendType">
+                            <p>World Cub</p>
+                              <span>13.5K Tweets</span>
+                          </div>
+                          <div class="trendType">
+                            <p>World Cub</p>
+                              <span>13.5K Tweets</span>
+                          </div>
+                          <span class="show-more">Show More</span>
+                        </div>
+
+                    </div>
+                    </div>
+                    <div class="followSugg">
+                      <div class="first-word">
+                        <span>Who to follow</span>
+                      </div>
+                      <div class="accounts">
+                      <div class="suggestion">
+
+                        
+                         <a href="">
+                            
+                               <img src="./Images/1628408771155.jpg" class="prof-img">
+                            
+                            <div class="det">
+                               <span class="name">Mego</span>
+                               <span class="handle">@m7mad_magdy</span> 
+                           </div>
+                        
+                          </a>
+                         <div >
+                          <button onclick="followBtn(this)"class="follow-btn"id="follow">Follow</button>
+                         </div>
+                       </div>
+                       <div class="suggestion">
+                        <a href="">
+                           
+                              <img src="./Images/LM10.jpg" class="prof-img">
+                           
+                           <div class="det">
+                              <span class="name">lukamodric`</span>
+                              <span class="handle">@Lukitaa</span> 
+                          </div>
+                       
+                         </a>
+                        <div>
+                         <button onclick="followBtn(this)" class="follow-btn" id="follow">Follow</button>
+                        </div>                        
+                      </div>
+
+                    </div>
+            </div>
+            
+        </div>
+     </main>
+
+
+
+    
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
