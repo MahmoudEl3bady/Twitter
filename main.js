@@ -51,14 +51,7 @@ function closingDialog(){
   const dialog=document.getElementById("tweetDialog");
   dialog.close();  
   }
-// function followBtn(){
-//   let followBtn=document.getElementById("follow");
-//   followBtn.innerHTML="<b>Following</b>";
-//   followBtn.style.backgroundColor='rgb(245, 250, 250)';
-//   followBtn.style.color='black';
-//   followBtn.style.border='1px solid gray';
-//   followBtn.style.width='85px';
-// }
+
  
 
 function followBtn(btn){
