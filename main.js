@@ -70,7 +70,7 @@ function newLine(x){
     if (e.key === "Enter") {
       e.preventDefault();
       x.value += '\n';
-      // console.log("Donee");
+      // console.log("Done");
     }
   });
 
