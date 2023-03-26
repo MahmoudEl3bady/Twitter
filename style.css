@@ -254,9 +254,27 @@ main {
     justify-content: space-between;
     flex-direction: row;
 }
+.new-tweet-icons {
+    width: 60%;
+    height: 30%;
+    /* margin-top:20%; */
+    /* margin-left:30%;  */
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    position:relative;
+    bottom: 0;
+    left:30%;
+}
+.new-tweet-icons span {
+    font-size:20px;
+    color: rgb(29,150, 240);
+    padding: 7px 7px 0 7px;
+    border-radius: 100%;
+}
 .tweet-icons i {
     font-size:17px;
-    color: rgb(85, 180, 224);
+    color: rgb(144, 146, 146);
     margin-right: 18px;
 
 }
@@ -265,7 +283,7 @@ main {
     margin: 10px 10px 0 0;
     font-size: medium;
 }
-.tweet-icons .newTweet{
+.new-tweet-icons .newTweet{
     /* float:right; */
     /* padding:1.5rem; */
     background-color: rgb(14, 130, 207);
@@ -273,7 +291,7 @@ main {
     /* margin:0; */
     border-radius: 30px;
     text-align:center;
-    margin-left:250px;
+    margin-left:22rem;
     font-size: 15px ;
     width:75px;
     height: 35px;
@@ -281,6 +299,10 @@ main {
     font-weight: 500;
     opacity: .4;
 }
+.material-symbols-outlined:hover {
+    background-color: rgb(220, 230, 247);
+}
+
 .tweet-icons .newTweet:hover {
    /* background-color:rgb(22, 112, 134); */
    cursor:pointer;
