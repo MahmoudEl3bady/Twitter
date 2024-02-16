@@ -1,19 +1,16 @@
-
 function addNewTweet() {
-
   let newTweetInput = document.getElementById("new-tweet");
   let newTweetInput2 = document.getElementById("new-tweet2");
-
   let newTweetText = newTweetInput2.value;
-  let newTweetText2=newTweetInput.value;
-  let input=newTweetText+newTweetText2;
-  if (!newTweetText&&!newTweetText2) {
-    return; 
-  }        
+  let newTweetText2 = newTweetInput.value;
+  let input = newTweetText + newTweetText2;
+  if (!newTweetText && !newTweetText2) {
+    return;
+  }
   const newTweet = document.createElement("div");
   newTweet.classList.add("feed-tweet");
   newTweet.innerHTML = `
-    <img src="./Images/MElabady.jpg" class="prof-img">
+    <a href="./profile.html"><img src="./Images/arsenal.jpg" class="prof-img"></a>
     <div class="feed-t-det">
       <div class="feed-details">
         <a href="" class="tweeter-name">
@@ -36,45 +33,41 @@ function addNewTweet() {
     </div>
   `;
 
-  let tweets = document.querySelector('.tweets');
+  let tweets = document.querySelector(".tweets");
   tweets.insertBefore(newTweet, tweets.firstChild);
-  newTweetInput.value="";
-  newTweetInput2.value=""; 
+  newTweetInput.value = "";
+  newTweetInput2.value = "";
   document.getElementById("tweetDialog").close();
-
 }
-function showingDialog(){
-const dialog=document.getElementById("tweetDialog");
-dialog.showModal();
+function showingDialog() {
+  const dialog = document.getElementById("tweetDialog");
+  dialog.showModal();
 }
-function closingDialog(){
-  const dialog=document.getElementById("tweetDialog");
-  dialog.close();  
-  }
+function closingDialog() {
+  const dialog = document.getElementById("tweetDialog");
+  dialog.close();
+}
 
- 
-
-function followBtn(btn){
-  let followBtn=btn
-  if (followBtn.innerHTML === 'Follow') {
-    followBtn.innerHTML="Following";
-    followBtn.className = 'unfollow-btn'
+function followBtn(btn) {
+  let followBtn = btn;
+  if (followBtn.innerHTML === "Follow") {
+    followBtn.innerHTML = "Following";
+    followBtn.className = "unfollow-btn";
   } else {
-    followBtn.innerHTML="Follow";
-    followBtn.className = 'follow-btn'
+    followBtn.innerHTML = "Follow";
+    followBtn.className = "follow-btn";
   }
 }
-function newLine(x){
+function newLine(x) {
   const myTextarea = document.getElementById("new-tweet2");
-  x.addEventListener("keydown", function(e) {
+  x.addEventListener("keydown", function (e) {
     if (e.key === "Enter") {
       e.preventDefault();
-      x.value += '\n';
+      x.value += "\n";
       // console.log("Done");
     }
   });
 
-  const btn=document.getElementById("test");
-  btn.style.opacity=1;
+  const btn = document.getElementById("test");
+  btn.style.opacity = 1;
 }
-

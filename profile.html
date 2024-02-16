@@ -7,10 +7,8 @@
           <meta charset="UTF-8"/>
         <link rel="icon" href="file:///home/mahmoud/Downloads/twitter%20(1).svg">  
         <link rel="stylesheet" href="profile-style.css">
-        <script src="main.js"></script>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">  
-        <script src="https://kit.fontawesome.com/ed2d065245.js" crossorigin="anonymous"></script>
     </head>
     <body>
         <!-- Beg Left-Section-->
@@ -76,33 +74,43 @@ more
         <!--End Left-Section-->
      </header>
      <main>
-      <dialog id="tweetDialog">
-        <button  onclick="closingDialog()" class="closeDialig">  
-          <span class="material-symbols-outlined" id="clos" >
-            close
-            </span>
-        </button>
-        <div class="N-tweet">
-          <div class="add-text" >
-          <img src="./Images/lmTweet.jpeg" alt="" class="prof-img"/>
-          <form class="text">
-            <input class="alt-text"type="text" id="new-tweet" placeholder="What's happening?" required name="What's happenging?">
-          </form> 
-          </div>
-       
-          </div>
-          <div class="tweet-icons">
-            <i class="fa-regular fa-image"></i>
-            <i class="fa-regular fa-image"></i>
-            <i class="fa-regular fa-image"></i>
-            <i class="fa-regular fa-face-smile"></i>
-            <i class="fa fa-calendar-week"></i>
-            <i class="fa-regular fa-location-dot"></i>
-            <div class="button">
-            <button onclick="addNewTweet()"class="newTweet">Tweet</button>
-            </div>
-            </div>
-        </dialog>
+
+          <dialog class="profile-details-edit" id="profile-details-edit">
+            <section class="dialog-body">
+
+              
+              <section class="edit-modal-section-one">
+              <div class="edit-modal-head">
+                <div class="closing-icon">
+                       <i title="Close" onclick="closeEditModal()" class="fa-solid fa-xmark close-icon"></i>
+                       <p>Edit Profile</p>
+                    </div>
+                    <button class="save-changes-btn" onclick="saveChanges()">Save</button>
+                  </div>
+                  <div class="profile-photos">
+                    <img src="./Images/1500x500.jpeg" alt="Heisenberg" class="cover-pic">  
+                    <img src="./Images/arsenal.jpg" class="prof-pic">
+                  </div>
+                </section>
+                <section class="edit-modal-section-two">
+
+                  <form action="" class="edit-profile-form">
+                    <input id="changeNameInput" type="text" name="name" placeholder="Name" />
+                    <input id="changeBioInput" type="text" name="Bio" placeholder="Bio" />
+                    <input id="changeWebsiteInput" type="text" name="website" placeholder="website" />
+                  </form> 
+                </section>
+                <section class="edit-modal-section-three">
+                  <div class="birth-date">
+                      <p class="first">Birth date:</p>
+                      <p>June 19 ,2003</p>
+                  </div>
+                  <p style="font-weight: bold;">Switch to Professional</p>
+                </section>
+              </section>
+                
+          </dialog>
+     
             <div class="main-flex">
                 <div class="main-feed">
                     <div class="container">
@@ -111,28 +119,28 @@ more
                         
                     <div class="head">
                       <a href="index.html">  
-                      <span class="material-symbols-outlined" id="arrow-bk" >
+                      <span class="material-symbols-outlined" id="arrow-bk" title="Back">
                             arrow_back
                             </span>
                           </a>
-                        <span class="prof-name">Mahmoud</span>
+                        <span class="prof-name" id="profileName">Mahmoud</span>
                         <span class="tweetsNo">123Tweets</span>
                     </div>
                    <div class="profile-photos">
                     <img src="./Images/1500x500.jpeg" alt="Heisenberg" class="cover-pic">  
                     <img src="./Images/arsenal.jpg" class="prof-pic">
-                    <button class="edit-btn"><b>Edit profile</b></button>
+                    <button class="edit-btn" onclick="showEditModal()">Edit profile</button>
                    </div> 
                    <div class="user">
-                    <span class="nameProf" style="font-weight: 700;">Mahmoud</span>
+                    <span class="nameProf" id="main-profile-name" style="font-weight: 700;">Mahmoud</span>
                     <span class="handle"style="font-size:15px;color:rgb(146, 150, 150);font-wight:500;">@m7moud_elabady</span>
 
                    </div>
                  <div class="details">
                                       
-                    <p class="bio" style="font-size: medium;margin:20px 0 0 20px ;">BFCAI</p>
+                    <p class="bio" id="profileBio" style="font-size: medium;margin:20px 0 0 20px ;">BFCAI</p>
                     <div style="display: flex;flex-direction: row;justify-content: space-between;">
-                    <a href="https://www.facebook.com/mahmoud.elabady.199/" target="_blank"  style="margin-left: 0px; display:flex;flex-direction: row; color:rgb(29, 155, 240)">
+                    <a id="profileWebsite" href="https://www.facebook.com/mahmoud.elabady.199/" target="_blank"  style="margin-left: 0px; display:flex;flex-direction: row; color:rgb(29, 155, 240)">
                       <span class="material-symbols-outlined" style="color:gray;margin-left: 10px; margin-bottom:20px;  transform: rotate(-60deg);">
                         link
                         </span>
@@ -142,7 +150,7 @@ more
                     <span class="material-symbols-outlined">
                       celebration
                       </span>
-                      <span>Born June 15,2003</span>
+                      <span>Born June 19,2003</span>
                   </div>
 
                   </div>
@@ -229,31 +237,7 @@ more
                     </div>
                  </div> 
                 </div>
-                <div class="feed-tweet" id="1">
-                  <img src="./Images/arsenal.jpg" class="prof-img">
-                 <div class="feed-t-det">
-                    <div class="feed-details">
-                        <a href="" class="tweeter-name">
-                          Mahmoud 
-                          <div>
-                            <span class="tweeter-handle">@m7moud_elabady</span></div>
-                            <div><span class="date">. 3d</span></div>
-                        </a>
-                      </div>
-                 
-                   <div class="tweet-text">
-                    <span style="font-size: 17px;">انا هقولك على حاجه</span>
-                    <img src="Images/IMG_20211021_221547.jpg">
-                   </div>
-                   <div class="tweet-icons">
-                      <i class="fa-regular fa-comment"></i>
-                      <i class="fa-solid fa-retweet"></i>
-                    <i class="fa-regular fa-heart"></i>
-                      <i class="fa-solid fa-arrow-up-from-bracket"></i>
-
-                  </div>
-               </div> 
-              </div>
+            
              
         
                   <div class="feed-tweet" id="4">
@@ -402,8 +386,10 @@ more
      </main>
 
 
+        <script src="https://kit.fontawesome.com/ed2d065245.js" crossorigin="anonymous"></script>
+          <script src="./profile.js"></script>
+          <script src="./main.js"></script>
 
-    
     </body>
 </html>
 
