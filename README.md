@@ -15,3 +15,4 @@ This project is a simple Twitter clone developed using HTML, CSS, and JavaScript
 - JavaScript: Used for adding interactivity and dynamic behavior to the web pages.
 
 
+[Screencast from 16 فبر, 2024 EET 08:44:11 م.webm](https://github.com/MahmoudEl3bady/Twitter-Clone/assets/113212468/30fc57df-a8de-46c0-8696-1b2d83e184c6)
